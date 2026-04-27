@@ -1,0 +1,30 @@
+{
+  "ckpt": "checkpoints/cadrille-rl",
+  "modality": "img",
+  "temp": 0.0,
+  "n": 1,
+  "results": [
+    {
+      "case_id": "00001926",
+      "stl": "data/deepcad_test_mesh/00001926.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,51.5,0))\nw1=cq.Workplane('XY',origin=(0,0,-1))\nr=w0.workplane(offset=-103/2).moveTo(-36,0).cylinder(103,64).union(w1.workplane(offset=101/2).moveTo(-39,0).cylinder(101,13))",
+          "iou": 0.9813608823882455,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_id": "00002718",
+      "stl": "data/deepcad_test_mesh/00002718.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,100))\nr=w0.sketch().segment((-67,-53),(-49,-53)).segment((-49,36)).segment((49,36)).segment((49,-53)).segment((67,-53)).segment((67,53)).segment((-67,53)).close().assemble().finalize().extrude(-200)",
+          "iou": 0.9824368313129073,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

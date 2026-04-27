@@ -1,0 +1,66 @@
+# Cadrille RL fine-tuning (Dr. CPPO / GRPO, matches official rl branch)
+# Usage: python rl/train.py --config configs/rl/default.yaml
+# Run name is auto-generated: rl-s50k-lr3e-5-G16-cppo-MMDD-HHMM
+# Override: python rl/train.py --config configs/rl/default.yaml --run-name my-run
+#
+# Official hyperparameters from col14m/cadrille (rl branch):
+#   G=16, top_N=4, lr=3e-5, eps=0.1, batch_updates=3, max_new_tokens=1024
+
+# run_name: null   # leave unset for auto-naming
+checkpoints_dir: ./checkpoints
+
+# Mode: cppo (Dr. CPPO / GRPO) or dpo
+mode: cppo
+
+# SFT checkpoint to start from (point to your best SFT checkpoint)
+checkpoint_path: ./checkpoints/cadrille-sft/checkpoint-best
+
+# Data — real GT meshes (matches official deepcad_fusion_train)
+train_modality: img      # paper default: image input for RL
+data_dir: ./data/cadrille_training
+hard_examples_pkl: null  # legacy: from rl/mine.py
+dpo_dataset: null        # for --mode dpo
+
+# Training
+max_steps: 50000
+lr: 3.0e-5               # AdamW (weight_decay=0.01), matches ref grpo_mm.py:286
+
+# Dr. CPPO / GRPO hyperparameters
+G: 16                    # rollout completions per prompt
+top_N: 4                 # select top-N by |advantage| for gradient update
+eps_high: 0.1            # PPO clip upper bound
+eps_low: 0.1             # PPO clip lower bound
+entropy_coef: 0.01       # entropy bonus coefficient (loss -= entropy_coef * entropy); counters lazy-code collapse
+batch_updates: 3         # gradient steps per rollout (re-use same data)
+batch_size: 1            # prompt batch size for each GRPO rollout step
+max_new_tokens: 1024     # CAD code requires >800 tokens; 1024 matches paper
+rollout_temperature: 1.0    # sampling temp for G rollouts; 0=greedy
+reward_workers: 4        # parallel reward compute workers
+# Optional replay buffer (ref-style hard-example curriculum)
+use_buffer: false
+buffer_sample_size: 1
+buffer_expand_frac: 0.5
+buffer_max_size: 4096
+eval_workers: 2           # Fix 5: pool workers for eval (separate from reward_workers)
+eval_timeout: 120.0        # Fix 1: long timeout for eval subprocess (vs 30s for training)
+
+# DPO (only used with --mode dpo)
+beta: 0.3                # KL coefficient (official Table 13)
+dpo_epochs_per_round: 10
+
+# Validation — 100 DeepCAD + 100 Fusion360, pc + img (matches paper eval exactly)
+val_deepcad_dir:       ./data/deepcad_test_mesh
+val_fusion360_dir:     ./data/fusion360_test_mesh
+val_samples_deepcad:   100
+val_samples_fusion360: 100
+val_modalities:        pc,img
+eval_steps: 500
+
+# Logging & checkpoints
+log_steps: 100
+save_steps: 5000
+
+# W&B
+wandb_project: cadrille-rl
+wandb_entity: null
+wandb_offline: false

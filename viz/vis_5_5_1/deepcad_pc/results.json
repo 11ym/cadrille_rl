@@ -1,0 +1,30 @@
+{
+  "ckpt": "checkpoints/cadrille-rl",
+  "modality": "pc",
+  "temp": 0.0,
+  "n": 1,
+  "results": [
+    {
+      "case_id": "00003166",
+      "stl": "data/deepcad_test_mesh/00003166.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.sketch().circle(51).circle(32,mode='s').finalize().extrude(-200)",
+          "iou": 0.987006625206226,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_id": "00000093",
+      "stl": "data/deepcad_test_mesh/00000093.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,8))\nr=w0.sketch().arc((-76,-22),(-93,-77),(-35,-73)).segment((20,-62)).arc((94,-73),(53,-16)).segment((30,11)).segment((39,46)).segment((32,69)).arc((-7,90),(-34,57)).segment((-30,17)).segment((-40,-6)).close().assemble().push([(-67,-57)]).circle(25,mode='s').push([(0,54)]).circle(28,mode='s').push([(0,-19)]).circle(25.5,mode='s').push([(66,-57)]).circle(25,mode='s').finalize().extrude(-16.5)",
+          "iou": 0.7734738315638076,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

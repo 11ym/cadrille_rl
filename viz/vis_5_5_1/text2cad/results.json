@@ -1,0 +1,16 @@
+[
+  {
+    "uid": "00659752",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. Draw a new face and within this face, draw a single loop consisting of 1 circle. Center the circle at coordinates [0.375, 0.375] and set the radius to 0.375. Apply a scaling factor of 0.75 to the entire sketch to adjust its size. Rotate the scaled sketch using the Euler angles [0, 0, 0] and translate it using the translation vector [0, 0, 0]. Extrude the sketch along the normal direction by 0.05 units to generate a new solid body. The resulting shape is a cylindrical object with a flat circular top and bottom, measuring 0.75 units in length and width, and 0.05 units in height.",
+    "gt_stl": "data/deepcad_test_mesh/00659752.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-7))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).finalize().extrude(13)",
+    "iou": 0.9749999746115972
+  },
+  {
+    "uid": "00857066",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. Begin by drawing a 2-dimensional sketch on the first face. In the first loop, draw a straight line from the origin (0, 0) to the 0 (0.75, 0). Next, draw an arc starting at (0.75, 0), passing through the midpoint (0.375, 0.2126), and ending back at the origin. Scale the entire sketch by a factor of 0.75. Transform the scaled sketch into 3 dimensions by rotating it with Euler angles set to 0 and translating it with a vector set to 0. Extrude the sketch 0.0214 units along the normal direction to create a new solid body. The final dimensions of the part are 0.75 units in length, 0.2126 units in width, and 0.0214 units in height.",
+    "gt_stl": "data/deepcad_test_mesh/00857066.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,-28,-3))\nr=w0.sketch().face(w0.sketch().segment((0,0),(200,0)).arc((200,0),(100,57),(0,0)).assemble()).finalize().extrude(6)",
+    "iou": 0.9461287078795556
+  }
+]

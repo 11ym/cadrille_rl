@@ -1,0 +1,142 @@
+[
+  {
+    "uid": "00639403",
+    "description": "Create a new coordinate system with Euler angles set to 0 degrees for all axes and a translation vector also set to 0. In the first face, draw 2 circles: the first loop is a circle centered at (0.375, 0.375) with a radius of 0.375, and the second loop is a smaller circle centered at the same 0 with a radius of 0.2031. Scale the entire sketch by a factor of 0.75. Rotate and translate the scaled sketch using the same Euler angles and translation vector as initially set. Extrude the sketch 0.0781 units along the normal direction to create a solid body. The resulting object has a length and width of 0.75 units and a height of 0.0781 units. This process forms a ring-shaped object with a central hole and a flat, circular base.",
+    "gt_stl": "data/deepcad_test_mesh/00639403.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-10))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(54),mode='s').finalize().extrude(21)",
+    "iou": 0.9895387678380831
+  },
+  {
+    "uid": "00815939",
+    "description": "Create a new coordinate system with Euler angles set to 0 degrees and a translation vector also set to 0. In the first face, draw the first loop as a circle centered at coordinates (0.375, 0.375) with a radius of 0.375. Draw the second loop as another circle with the same center but a smaller radius of 0.1923. Scale the entire 2-dimensional sketch by a factor of 0.75. Rotate the scaled sketch using the same Euler angles and translate it using the same vector. Extrude the sketch along its normal by 0.0769 units to generate a 3-dimensional model. Ensure that the extrusion does not occur in the opposite direction, resulting in a new solid body. The final dimensions of the ring-shaped object with a flat, circular base are a length of 0.75 units, a width of 0.75 units, and a height of 0.0769 units.",
+    "gt_stl": "data/deepcad_test_mesh/00815939.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-10))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(51),mode='s').finalize().extrude(21)",
+    "iou": 0.9729921378110492
+  },
+  {
+    "uid": "00161417",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. Draw a 2-dimensional sketch on the first face. Within this face, draw a single loop. Inside the loop, draw a circle centered at coordinates (0.375, 0.375) with a radius of 0.375. Scale the entire 2-dimensional sketch by a factor of 0.75. Rotate the scaled 2-dimensional sketch plane using Euler angles of (0, 0, 0) and translate it using the vector (0, 0, 0). Extrude the scaled 2-dimensional sketch along the normal direction by 0.75 units to create a new solid body. Ensure that the extrusion does not extend in the opposite direction. The final dimensions of the cylindrical object will be 0.75 units in length, width, and height.",
+    "gt_stl": "data/deepcad_test_mesh/00161417.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-100))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).finalize().extrude(200)",
+    "iou": 0.9999999410786242
+  },
+  {
+    "uid": "00649373",
+    "description": "Create a new coordinate system with the Euler angles set to [0, 0, -90] degrees and the translation vector set to [0, 0.375, 0]. Next, draw a 2-dimensional sketch on a single face. Within this face, draw a single loop, and within the loop, draw a circle with a center at [0.0904, 0.0904] and a radius of 0.0904. Apply a scaling factor of 0.1807 to the entire 2-dimensional sketch. Transform the scaled 2-dimensional sketch into 3 dimensions by rotating it using the Euler angles [0, 0, -90] degrees and translating it using the translation vector [0, 0.375, 0]. Extrude the transformed 2-dimensional sketch along the normal direction by 0.1875 units and in the opposite direction of the normal by 0.1875 units. This extrusion will create a new solid body. The final cylindrical object will have a length of 0.1807 units, a width of 0.1807 units, and a height of 0.375 units.",
+    "gt_stl": "data/deepcad_test_mesh/00649373.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(-24,0,0))\nr=w0.sketch().face(w0.sketch().push([(0,24)]).circle(24)).finalize().extrude(100,both=True)",
+    "iou": 0.9921881575352636
+  },
+  {
+    "uid": "00364020",
+    "description": "Create a new coordinate system with Euler angles set to 0 degrees and a translation vector also set to 0. On the first face, draw the first loop as a circle centered at coordinates [0.2625, 0.2625] with a radius of 0.2625. Within the same face, draw the second loop as another circle centered at the same coordinates but with a smaller radius of 0.15. Apply a uniform scale factor of 0.525 to the entire 2-dimensional sketch to adjust its size. Rotate the scaled sketch using the same Euler angles and translate it using the same translation vector to position it correctly. Extrude the sketch 0.75 units along the normal direction to create a hollow cylindrical solid body. Ensure that the extrusion does not extend in the opposite direction of the normal. The final dimensions of the hollow cylinder are 0.525 units in length and width, and 0.75 units in height.",
+    "gt_stl": "data/deepcad_test_mesh/00364020.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-70,0,-100))\nr=w0.sketch().face(w0.sketch().push([(70,0)]).circle(70)).face(w0.sketch().push([(70,0)]).circle(40),mode='s').finalize().extrude(200)",
+    "iou": 0.9999997904207106
+  },
+  {
+    "uid": "00301470",
+    "description": "Start by creating a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. For the first 2-dimensional sketch, draw a circle on the first face within the first loop. Place the center of this circle at coordinates (0.375, 0.375) with a radius of 0.375 units. Next, apply a scale factor of 0.75 to the entire sketch to reduce its size proportionally. Ensure that the scaled sketch remains aligned with the original coordinate system by setting the Euler angles and translation vector to 0 during the transformation. To convert the 2-dimensional sketch into a 3-dimensional object, extrude the sketch along the normal direction by 0.2223 units. Avoid extruding in the opposite direction to maintain the desired shape. The final dimensions of the cylindrical object will be a length of 0.75 units, a width of 0.75 units, and a height of 0.2223 units.",
+    "gt_stl": "data/deepcad_test_mesh/00301470.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-30))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).finalize().extrude(59)",
+    "iou": 0.9952702159520554
+  },
+  {
+    "uid": "00008907",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. Draw the first face of the 2-dimensional sketch. In the first loop, draw a circle centered at [0.375, 0.375] with a radius of 0.375. In the second loop, draw another circle with the same center but a radius of 0.3598. Scale the entire 2-dimensional sketch by a factor of 0.75. Rotate the scaled sketch using the Euler angles [0, 0, 0] and translate it using the translation vector [0, 0, 0]. Extrude the scaled and transformed sketch along the normal direction by 0.75 units to generate the 3-dimensional model. Ensure that the extrusion does not occur in the opposite direction of the normal. The final dimensions of the cylindrical cup base are 0.75 units in length, width, and height.",
+    "gt_stl": "data/deepcad_test_mesh/00008907.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-100))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(96),mode='s').finalize().extrude(200)",
+    "iou": 0.9849279607497062
+  },
+  {
+    "uid": "00256738",
+    "description": "Create a new coordinate system with Euler angles set to 0 degrees for all axes and a translation vector also set to 0. Draw a single face in this coordinate system, and within this face, draw a single loop. Inside this loop, draw a circle with its center located at coordinates (0.375, 0.375) and a radius of 0.375 units. Apply a scaling factor of 0.75 to the entire sketch to adjust its size proportionally. Rotate the scaled sketch using the Euler angles defined in the coordinate system, and translate it using the specified translation vector. Extrude the transformed sketch along the normal direction by 0.075 units to create a 3-dimensional solid body. The resulting cylindrical base will have a length of 0.75 units, a width of 0.75 units, and a height of 0.075 units.",
+    "gt_stl": "data/deepcad_test_mesh/00256738.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-10))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).finalize().extrude(20)",
+    "iou": 0.9999999413088891
+  },
+  {
+    "uid": "00243049",
+    "description": "Create a new coordinate system with Euler angles set to 0 and translation vector also set to 0. Begin by drawing the first face of the 2D sketch. In the first loop, draw the first line from the origin (0, 0) to (0.75, 0), then draw the second line from (0.75, 0) to (0.75, 0.6). Continue with the third line from (0.75, 0.6) to (0, 0.6), and finish the loop by drawing the fourth line from (0, 0.6) back to the origin. Apply a scale factor of 0.75 to the entire 2D sketch. Transform the scaled 2D sketch into 3D space by rotating it with Euler angles set to 0 and translating it with a vector of zeros. Extrude the 2D sketch 0.45 units in the direction of the normal to create a solid body. Ensure that no extrusion occurs in the opposite direction. The final dimensions of the cube with rounded edges and corners are a length of 0.75, a width of 0.6, and a height of 0.45.",
+    "gt_stl": "data/deepcad_test_mesh/00243049.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,-80,-60))\nr=w0.sketch().face(w0.sketch().segment((0,0),(200,0)).segment((200,0),(200,160)).segment((200,160),(0,160)).segment((0,160),(0,0)).assemble()).finalize().extrude(120)",
+    "iou": 0.9999998969767513
+  },
+  {
+    "uid": "00248726",
+    "description": "Create a cylindrical object by following these detailed steps. First, establish a new coordinate system with Euler angles set to 0, 0, and -90 degrees, and a translation vector of 0, 0.75, and 0. Next, draw a 2-dimensional sketch on the first face. In the first loop, draw a circle centered at (0.375, 0.375) with a radius of 0.375. In the second loop, draw another circle centered at the same 0 with a radius of 0.36. Scale this sketch using a factor of 0.75. Then, transform the scaled sketch into 3 dimensions by rotating it according to the Euler angles and translating it using the specified vector. Finally, extrude the sketch along the normal direction by 0.75 units to create a solid body. The final dimensions of the cylindrical object are 0.75 units in length, width, and height.",
+    "gt_stl": "data/deepcad_test_mesh/00248726.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(-100,100,0))\nr=w0.sketch().face(w0.sketch().push([(0,100)]).circle(100)).face(w0.sketch().push([(0,100)]).circle(96),mode='s').finalize().extrude(-200)",
+    "iou": 0.9924095136834824
+  },
+  {
+    "uid": "00865394",
+    "description": "Create a new coordinate system with Euler angles set to 0 degrees for all axes and a translation vector also set to 0. On the first face, draw the first loop as a circle centered at coordinates (0.375, 0.375) with a radius of 0.375 units. Within the same face, draw the second loop as a smaller circle centered at the same coordinates but with a radius of 0.1988 units. Scale the entire 2-dimensional sketch by a factor of 0.75 to reduce its size proportionally. Since no additional transformations are required, proceed to extrude the scaled sketch 0.45 units along the normal direction to create a 3-dimensional solid body. The resulting shape is a cylinder with a central circular hole, where the top and bottom surfaces are flat and parallel, and the sides are smooth and curved. The dimensions of the cylinder are 0.75 units in length and width, and 0.45 units in height.",
+    "gt_stl": "data/deepcad_test_mesh/00865394.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-60))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(53),mode='s').finalize().extrude(120)",
+    "iou": 0.9999999687741612
+  },
+  {
+    "uid": "00747189",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector of (0, 0, 0.0836). On the first face, draw 2 concentric circles in the first loop with a center at (0.375, 0.375) and radii of 0.375 and 0.3633, respectively. Apply a scaling factor of 0.75 to the entire sketch to reduce its size proportionally. Rotate the scaled sketch using the same Euler angles and translate it using the specified translation vector. Extrude the sketch 0.0836 units in the direction opposite to the normal, ensuring the extrusion depth towards the normal is 0. Finally, create a new solid body from the extruded sketch. The final dimensions of the part are a length of 0.75, a width of 0.75, and a height of 0.0836.",
+    "gt_stl": "data/deepcad_test_mesh/00747189.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,11))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(97),mode='s').finalize().extrude(-22)",
+    "iou": 0.9472414261742081
+  },
+  {
+    "uid": "00010111",
+    "description": "Create a new coordinate system by setting the Euler angles to 0 degrees, 0 degrees, and -90 degrees. Set the translation vector to 0, 0.2927, and 0. On the first face, draw the first loop as a circle centered at coordinates 0.375, 0.375, with a radius of 0.375. For the second loop, start by drawing an arc from the 0.0033, 0.4116, passing through 0.375, 0.3201, and ending at 0.4159, 0.4116. Connect the endpoints of the arc with a straight line from 0.4159, 0.4116, to 0.3341, 0.4116. Scale the entire sketch by a factor of 0.75. Rotate the scaled sketch using the Euler angles and translate it using the translation vector defined earlier. Extrude the sketch 0.2927 units along the normal direction to create a solid body. The final dimensions of the cylindrical object with a central hole are length 0.75, width 0.75, and height 0.2927.",
+    "gt_stl": "data/deepcad_test_mesh/00010111.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(-100,39,0))\nr=w0.sketch().face(w0.sketch().push([(0,100)]).circle(100)).face(w0.sketch().arc((10,89),(-15,100),(10,111)).segment((10,111),(10,89)).assemble(),mode='s').finalize().extrude(-78)",
+    "iou": 0.9981964666785171
+  },
+  {
+    "uid": "00113523",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. For the first face, draw 2 concentric circles centered at coordinates [0.375, 0.375]. The outer circle has a radius of 0.375 units, while the inner circle has a radius of 0.1875 units. Apply a scale factor of 0.75 to the entire 2-dimensional sketch to adjust its size. Rotate the scaled sketch using the Euler angles [0, 0, 0] and translate it using the translation vector [0, 0, 0] to position it correctly in 3-dimensional space. Extrude the 2-dimensional sketch along the normal direction by 0.5625 units to create a 3-dimensional solid body. Ensure that this extrusion does not extend in the opposite direction. The final dimensions of the cylindrical object are 0.75 units in length, 0.75 units in width, and 0.5625 units in height.",
+    "gt_stl": "data/deepcad_test_mesh/00113523.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-75))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(50),mode='s').finalize().extrude(150)",
+    "iou": 0.9999997589126629
+  },
+  {
+    "uid": "00698176",
+    "description": "Create a new coordinate system with the Euler angles set to 0, 0, and -90 degrees, and the translation vector set to 0, 0.0234, and 0. On the first face, draw the first loop consisting of 4 lines. Start the first line from the origin to the 0.0075, 0. Continue with the second line from 0.75, 0 to 0.75, 0.0937. Draw the third line from 0.75, 0.0937 to 0, 0.0937. Finish the loop with the fourth line from 0, 0.0937 back to the origin. Scale the entire 2-dimensional sketch by a factor of 0.75. Rotate the scaled sketch using the Euler angles 0, 0, and -90 degrees, and translate it using the vector 0, 0.0234, and 0. Extrude the sketch 0.0234 units along the normal direction, ensuring no extrusion occurs in the opposite direction. Finally, create a new solid body with this part. The dimensions of the rectangular section are length 0.75, width 0.0937, and height 0.0234.",
+    "gt_stl": "data/deepcad_test_mesh/00698176.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(-100,3,-12))\nr=w0.sketch().face(w0.sketch().segment((0,0),(0,200)).segment((0,200),(25,200)).segment((25,200),(25,0)).segment((25,0),(0,0)).assemble()).finalize().extrude(-6)",
+    "iou": 0.9599995285415682
+  },
+  {
+    "uid": "00945298",
+    "description": "Create a new coordinate system by setting the Euler angles to 0 degrees in all axes and the translation vector to [0, 0, 0.4812]. Next, draw a 2-dimensional sketch on a new face. Within this face, draw a single loop containing a circle centered at coordinates [0.1214, 0.1214] with a radius of 0.1214. Apply a scaling factor of 0.2428 to the entire 2-dimensional sketch. Transform the scaled sketch into 3 dimensions by rotating it using the Euler angles [0, 0, 0] degrees and translating it using the vector [0, 0, 0.4812]. Finally, extrude the transformed 2-dimensional sketch along its normal by 0.2688 units without extruding in the opposite direction. The resulting shape will be a cylindrical object with a slightly rounded top and bottom, a smooth surface, and a uniform diameter throughout. The final dimensions are length 0.2428, width 0.2428, and height 0.2688.",
+    "gt_stl": "data/deepcad_test_mesh/00945298.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-80,0,-100))\nr=w0.sketch().face(w0.sketch().push([(80,0)]).circle(80)).finalize().extrude(200)",
+    "iou": 0.784754903165898
+  },
+  {
+    "uid": "00048728",
+    "description": "Start by creating a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. Next, draw the first 2-dimensional sketch on the first face. In this sketch, draw the first loop as a circle with a center at (0.375, 0.375) and a radius of 0.375. For the second loop, draw another circle with the same center but a radius of 0.3448. After completing the sketch, apply a scaling factor of 0.75 to the entire sketch to adjust its size. Since the Euler angles and translation vector are already set to 0, no further transformation is needed. Proceed to extrude the scaled sketch along the normal direction by 0.0057 units, ensuring that the extrusion does not occur in the opposite direction. This extrusion will create a new solid body. The final dimensions of the part are a length of 0.75 units, a width of 0.75 units, and a height of 0.0057 units.",
+    "gt_stl": "data/deepcad_test_mesh/00048728.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,-1))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(92),mode='s').finalize().extrude(2)",
+    "iou": 0.7512075328563168
+  },
+  {
+    "uid": "00623866",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector also set to 0. On the first face, draw the first loop as a single circle centered at coordinates (0.0938, 0.0938) with a radius of 0.0938 units. Scale the 2D sketch by a factor of 0.1875. Rotate the scaled 2D sketch using the same Euler angles and translate it using the same translation vector. Extrude the 2D sketch along the normal direction by 0.75 units to generate the 3D model, ensuring that the extrusion does not occur in the opposite direction. This process will create a new solid body with a length of 0.1875 units, a width of 0.1875 units, and a height of 0.75 units, resulting in a cylindrical object with a smooth surface and rounded edges.",
+    "gt_stl": "data/deepcad_test_mesh/00623866.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-25,0,-100))\nr=w0.sketch().face(w0.sketch().push([(25,0)]).circle(25)).finalize().extrude(200)",
+    "iou": 0.9999998610949464
+  },
+  {
+    "uid": "00126045",
+    "description": "Create a new coordinate system with Euler angles set to 0 and a translation vector of 0, 0, 0.3125. Begin by drawing the first 2-dimensional sketch on the first face. In the first loop, draw a circle centered at (0.375, 0.375) with a radius of 0.375. In the second loop, draw another circle with the same center but a smaller radius of 0.2953. Apply a scale factor of 0.75 to the entire sketch to reduce its size proportionally. Transform the scaled 2-dimensional sketch into 3 dimensions using the previously defined coordinate system. Extrude the sketch 0.1562 units along the normal direction and an additional 0.1562 units in the opposite direction of the normal to create a solid body. The final dimensions of the cylindrical object will be a length of 0.75, a width of 0.75, and a height of 0.3125.",
+    "gt_stl": "data/deepcad_test_mesh/00126045.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(-100,0,0))\nr=w0.sketch().face(w0.sketch().push([(100,0)]).circle(100)).face(w0.sketch().push([(100,0)]).circle(79),mode='s').finalize().extrude(83,both=True)",
+    "iou": 0.9852567166347378
+  },
+  {
+    "uid": "00026634",
+    "description": "Start by creating a new coordinate system with the Euler angles set to [0, 0, -90] and the translation vector set to [0, 0.6356, 0]. Next, draw a 2-dimensional sketch on the first face. Within this face, draw a single loop consisting of 1 circle. Center the circle at coordinates [0.375, 0.375] and set its radius to 0.375. Apply a scaling factor of 0.75 to the entire sketch to adjust its size. Transform the scaled 2-dimensional sketch into 3 dimensions by rotating it using the Euler angles [0, 0, -90] and translating it using the translation vector [0, 0.6356, 0]. Finally, extrude the sketch along the normal direction by 0.6356 units to generate the 3-dimensional model. Ensure that the extrusion does not occur in the opposite direction, resulting in a new solid body. The final dimensions of the cylindrical base are 0.75 units in length, 0.75 units in width, and 0.6356 units in height.",
+    "gt_stl": "data/deepcad_test_mesh/00026634.stl",
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(-100,85,0))\nr=w0.sketch().face(w0.sketch().push([(0,100)]).circle(100)).finalize().extrude(-169)",
+    "iou": 0.9967905756128829
+  }
+]

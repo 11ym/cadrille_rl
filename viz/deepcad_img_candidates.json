@@ -1,0 +1,362 @@
+[
+  {
+    "uid": "00104076",
+    "iou": 0.9999999609866296,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,63))\nr=w0.sketch().rect(200,200).circle(62.5,mode='s').finalize().extrude(-125)",
+    "stl": "data/deepcad_test_mesh/00104076.stl"
+  },
+  {
+    "uid": "00963476",
+    "iou": 0.962811312230719,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,17,0))\nr=w0.sketch().circle(18).circle(11.5,mode='s').finalize().extrude(-34).union(w0.sketch().circle(100).circle(11,mode='s').finalize().extrude(-15))",
+    "stl": "data/deepcad_test_mesh/00963476.stl"
+  },
+  {
+    "uid": "00222047",
+    "iou": 0.9275574944651266,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,82,0))\nr=w0.sketch().push([(0,36)]).circle(9).push([(0,-37)]).circle(9).push([(0,37)]).rect(1.5,2.5).finalize().extrude(-182).union(w0.workplane(offset=18/2).box(85.5,200,18)).union(w0.workplane(offset=18/2).box(1.5,1.5,1))",
+    "stl": "data/deepcad_test_mesh/00222047.stl"
+  },
+  {
+    "uid": "00173187",
+    "iou": 0.9089607575495741,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,100))\nr=w0.sketch().segment((-92.5,-43),(92.5,-43)).segment((92.5,41)).segment((83,42)).segment((76,-30)).segment((60,-32)).segment((-67,-32)).segment((-75,-27)).segment((-77,34.5)).segment((-82.5,43)).segment((-91,42)).segment((-92.5,37)).close().assemble().finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00173187.stl"
+  },
+  {
+    "uid": "00738860",
+    "iou": 0.9936679231211812,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,67,0))\nr=w0.workplane(offset=-133.5/2).moveTo(0,0).box(166,200,133).union(w0.workplane(offset=-127/2).box(160.5,17.5,127))",
+    "stl": "data/deepcad_test_mesh/00738860.stl"
+  },
+  {
+    "uid": "00311968",
+    "iou": 0.9974909540086977,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,97,0))\nr=w0.sketch().circle(100).circle(44,mode='s').finalize().extrude(-193.5)",
+    "stl": "data/deepcad_test_mesh/00311968.stl"
+  },
+  {
+    "uid": "00840120",
+    "iou": 0.9086195610421368,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,5,0))\nr=w0.sketch().segment((-100,-39),(-83,-53)).segment((83,-53)).segment((100,-36.5)).segment((100,37)).segment((83,53)).segment((-83,52.5)).segment((-100,39)).close().assemble().push([(-48,0)]).rect(81.5,83.5,mode='s').push([(47.5,0)]).rect(81.5,83.5,mode='s').finalize().extrude(-9)",
+    "stl": "data/deepcad_test_mesh/00840120.stl"
+  },
+  {
+    "uid": "00093629",
+    "iou": 0.7911079486529524,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,29))\nr=w0.sketch().segment((-71,-91),(-62,-100)).segment((62,-100)).segment((71,-91)).segment((71,-8)).segment((71,91)).segment((62,100)).segment((-62,100)).segment((-71,100)).close().assemble().rect(127,189.5,mode='s').finalize().extrude(-58).union(w0.workplane(offset=-8.5/2).box(137.5,196.5,8.5)).union(w0.workplane(offset=-6/2).box(137.5,18.5,6))",
+    "stl": "data/deepcad_test_mesh/00093629.stl"
+  },
+  {
+    "uid": "00743460",
+    "iou": 0.9534077895828164,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,100))\nr=w0.workplane(offset=-200/2).moveTo(0,0).cylinder(200,25).union(w0.workplane(offset=-8/2).moveTo(0,0.5).box(1.5,1.5,7)).union(w0.workplane(offset=-10/2).cylinder(10,1))",
+    "stl": "data/deepcad_test_mesh/00743460.stl"
+  },
+  {
+    "uid": "00209335",
+    "iou": 0.9822181365620964,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,100))\nr=w0.sketch().circle(80).circle(40,mode='s').finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00209335.stl"
+  },
+  {
+    "uid": "00310968",
+    "iou": 0.9996891922347269,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.workplane(offset=-200/2).moveTo(0,0).cylinder(200,25).union(w0.workplane(offset=-19/2).box(1.5,1.5,1))",
+    "stl": "data/deepcad_test_mesh/00310968.stl"
+  },
+  {
+    "uid": "00103027",
+    "iou": 0.9909517351386088,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-12))\nr=w0.sketch().circle(100).finalize().extrude(-54.5).union(w0.sketch().circle(69).finalize().extrude(79)).union(w0.workplane(offset=78/2).box(11.5,1.5,78))",
+    "stl": "data/deepcad_test_mesh/00103027.stl"
+  },
+  {
+    "uid": "00358097",
+    "iou": 0.9872246921278963,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,13))\nr=w0.sketch().segment((-71.5,-100),(71.5,-100)).segment((71.5,100)).segment((-7,100)).segment((-71,100)).close().assemble().finalize().extrude(-26)",
+    "stl": "data/deepcad_test_mesh/00358097.stl"
+  },
+  {
+    "uid": "00928058",
+    "iou": 0.9523801178686191,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.workplane(offset=-200/2).moveTo(0,0).box(20,10.5,200).union(w0.workplane(offset=-20/2).box(17.5,7.5,8))",
+    "stl": "data/deepcad_test_mesh/00928058.stl"
+  },
+  {
+    "uid": "00721236",
+    "iou": 0.9764487330564566,
+    "code": "import cadquery as cq\nw0=cq.Workplane('YZ',origin=(7,0,0))\nr=w0.sketch().circle(100).circle(6.5,mode='s').finalize().extrude(-11.5)",
+    "stl": "data/deepcad_test_mesh/00721236.stl"
+  },
+  {
+    "uid": "00934199",
+    "iou": 0.9920605973068696,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,17))\nr=w0.sketch().segment((-100,0),(-50,-87)).segment((50,-86.5)).segment((100,0)).segment((50,87)).segment((-50,86.5)).close().assemble().finalize().extrude(-68).union(w0.workplane(offset=34/2).cylinder(34,81))",
+    "stl": "data/deepcad_test_mesh/00934199.stl"
+  },
+  {
+    "uid": "00981373",
+    "iou": 0.9743173751382437,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,25))\nr=w0.sketch().rect(200,150).push([(-51,-24)]).circle(17,mode='s').push([(24,-24)]).circle(15.5,mode='s').finalize().extrude(-50)",
+    "stl": "data/deepcad_test_mesh/00981373.stl"
+  },
+  {
+    "uid": "00867248",
+    "iou": 0.993257906702226,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,51))\nr=w0.sketch().segment((-86.5,-50),(0,-100)).segment((86.5,-50)).segment((86.5,50)).segment((0,100)).segment((-86.5,50)).close().assemble().circle(54,mode='s').finalize().extrude(-102)",
+    "stl": "data/deepcad_test_mesh/00867248.stl"
+  },
+  {
+    "uid": "00658709",
+    "iou": 0.9376139521149036,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,100))\nr=w0.sketch().circle(62.5).circle(34.5,mode='s').finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00658709.stl"
+  },
+  {
+    "uid": "00476756",
+    "iou": 1.0,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,100))\nr=w0.workplane(offset=-200/2).moveTo(0,0).box(200,200,200).union(w0.workplane(offset=-109/2).box(196.5,192.5,109))",
+    "stl": "data/deepcad_test_mesh/00476756.stl"
+  },
+  {
+    "uid": "00536120",
+    "iou": 0.4035886414981395,
+    "code": "import cadquery as cq\nw0=cq.Workplane('YZ',origin=(100,0,0))\nr=w0.workplane(offset=-200/2).box(1,180,200).union(w0.workplane(offset=-1/2).box(1,1,1))",
+    "stl": "data/deepcad_test_mesh/00536120.stl"
+  },
+  {
+    "uid": "00390273",
+    "iou": 0.9999997851133602,
+    "code": "import cadquery as cq\nw0=cq.Workplane('YZ',origin=(25,0,0))\nr=w0.workplane(offset=-50/2).box(100,200,50).union(w0.workplane(offset=-19/2).box(95.5,17.5,19))",
+    "stl": "data/deepcad_test_mesh/00390273.stl"
+  },
+  {
+    "uid": "00392613",
+    "iou": 0.9954613768362451,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,34.5,0))\nw1=cq.Workplane('YZ',origin=(100,0,0))\nr=w0.workplane(offset=-80/2).moveTo(0,-20).box(80,160,80).union(w0.workplane(offset=12/2).moveTo(0,5).cylinder(12,41)).union(w1.workplane(offset=-50/2).moveTo(-6,0).cylinder(50,30)).union(w1.workplane(offset=-50/2).moveTo(-6,0).box(1.5,1.5,50)).union(w1.workplane(offset=-29/2).moveTo(-6,0.5).box(1,1.5,29))",
+    "stl": "data/deepcad_test_mesh/00392613.stl"
+  },
+  {
+    "uid": "00504059",
+    "iou": 0.9991828342066991,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,67))\nr=w0.workplane(offset=-133.5/2).moveTo(0,0).box(120,200,133).union(w0.workplane(offset=-10/2).box(115.5,186.5,10))",
+    "stl": "data/deepcad_test_mesh/00504059.stl"
+  },
+  {
+    "uid": "00412172",
+    "iou": 0.9908967708809147,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-12))\nr=w0.workplane(offset=20/2).moveTo(1.5,0).box(197,96,20).union(w0.workplane(offset=23.5/2).moveTo(0,-46.5).box(200,2,23)).union(w0.workplane(offset=23.5/2).moveTo(97.5,-42.5).box(1.5,1.5,23))",
+    "stl": "data/deepcad_test_mesh/00412172.stl"
+  },
+  {
+    "uid": "00322746",
+    "iou": 0.8368251435040247,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-19))\nw1=cq.Workplane('ZX',origin=(0,-6,0))\nr=w0.sketch().segment((-100,-41),(100,-38)).segment((100,42)).segment((-10,42)).segment((-100,42)).close().assemble().push([(12,-24)]).circle(7.5,mode='s').push([(-85,-25)]).circle(7.5).finalize().extrude(8).union(w0.workplane(offset=39/2).moveTo(61.5,0.5).box(36.5,62.5,39)).union(w1.sketch().push([(0,-41.5)]).rect(38.5,77.5).finalize().extrude(-31.5)).union(w1.workplane(offset=-1/2).moveTo(0,97.5).box(1.5,1,1))",
+    "stl": "data/deepcad_test_mesh/00322746.stl"
+  },
+  {
+    "uid": "00717818",
+    "iou": 0.9741582125545301,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.sketch().arc((-95,0),(-67,-66),(6,-93)).segment((83,-87)).segment((22,-28)).segment((96,0)).segment((21,34.5)).segment((76,93.5)).segment((-6,93.5)).arc((-67,67),(-95,6)).close().assemble().finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00717818.stl"
+  },
+  {
+    "uid": "00965826",
+    "iou": 0.9925496613443398,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,34,0))\nr=w0.workplane(offset=-67/2).box(200,66.5,67).union(w0.workplane(offset=-8/2).box(176.5,9.5,8))",
+    "stl": "data/deepcad_test_mesh/00965826.stl"
+  },
+  {
+    "uid": "00431959",
+    "iou": 0.9771539950562876,
+    "code": "import cadquery as cq\nw0=cq.Workplane('YZ',origin=(100,0,0))\nr=w0.workplane(offset=-200/2).box(1.5,100,200).union(w0.workplane(offset=-2/2).box(1.5,1.5,1))",
+    "stl": "data/deepcad_test_mesh/00431959.stl"
+  },
+  {
+    "uid": "00530488",
+    "iou": 0.9905737545007262,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,67,0))\nr=w0.sketch().segment((-83.5,-100),(83.5,-100)).segment((83.5,-33)).segment((-17,32)).segment((-18,100)).segment((-83.5,100)).close().assemble().finalize().extrude(-133.5)",
+    "stl": "data/deepcad_test_mesh/00530488.stl"
+  },
+  {
+    "uid": "00772082",
+    "iou": 0.9991952037078818,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,60))\nr=w0.workplane(offset=-120/2).moveTo(0,0).box(200,120,120).union(w0.workplane(offset=-79/2).box(186.5,111.5,79))",
+    "stl": "data/deepcad_test_mesh/00772082.stl"
+  },
+  {
+    "uid": "00623092",
+    "iou": 0.9948550807130341,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,-2,0))\nr=w0.sketch().segment((-50,-100),(50,-100)).segment((50,-34)).segment((36,-34)).segment((36,34)).segment((50,34)).segment((50,100)).segment((-50,100)).close().assemble().finalize().extrude(5)",
+    "stl": "data/deepcad_test_mesh/00623092.stl"
+  },
+  {
+    "uid": "00047559",
+    "iou": 0.972162251934925,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,37,0))\nr=w0.sketch().segment((-100,-100),(-27,-100)).segment((-27,-46)).segment((45,-46)).segment((45,9)).segment((100,10)).segment((100,100)).segment((27,100)).segment((27,45)).segment((-45,45)).segment((-45,-26.5)).segment((-100,-27)).close().assemble().finalize().extrude(-74)",
+    "stl": "data/deepcad_test_mesh/00047559.stl"
+  },
+  {
+    "uid": "00624861",
+    "iou": 0.8675917631626474,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,38,0))\nr=w0.sketch().segment((-100,22),(95,22)).segment((95,-23)).segment((-26,-23)).segment((-26,-29)).segment((100,-28.5)).segment((100,29)).segment((-100,28)).close().assemble().push([(37,-0)]).rect(114.5,43.5,mode='s').finalize().extrude(-74)",
+    "stl": "data/deepcad_test_mesh/00624861.stl"
+  },
+  {
+    "uid": "00275990",
+    "iou": 0.9894950515263322,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,47.5,0))\nr=w0.workplane(offset=-94/2).moveTo(0,-0).box(200,95,94).union(w0.workplane(offset=-8/2).box(196.5,87.5,8))",
+    "stl": "data/deepcad_test_mesh/00275990.stl"
+  },
+  {
+    "uid": "00047996",
+    "iou": 0.9957063786427314,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,38,0))\nr=w0.sketch().segment((-75,-100),(75,-100)).segment((75,-75)).segment((58,-75)).segment((58,42)).segment((-50,42)).segment((-50,67)).segment((-75,67)).close().assemble().finalize().extrude(-75).union(w0.workplane(offset=-42.5/2).moveTo(-62.5,50.5).box(25,99,42)).union(w0.workplane(offset=-42/2).moveTo(-62,50.5).box(20.5,11.5,42))",
+    "stl": "data/deepcad_test_mesh/00047996.stl"
+  },
+  {
+    "uid": "00972239",
+    "iou": 0.98788967942131,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,91,0))\nr=w0.sketch().segment((-100,-45),(-81,-45)).segment((-80,-59)).segment((71,-58.5)).segment((80,-63)).segment((80,55.5)).segment((100,57.5)).segment((100,63)).segment((-17.5,63)).segment((-80,63)).segment((-100,63)).close().assemble().finalize().extrude(-182)",
+    "stl": "data/deepcad_test_mesh/00972239.stl"
+  },
+  {
+    "uid": "00254344",
+    "iou": 0.9996891907724702,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,50,0))\nr=w0.workplane(offset=-100/2).cylinder(100,100).union(w0.workplane(offset=-30/2).cylinder(30,96))",
+    "stl": "data/deepcad_test_mesh/00254344.stl"
+  },
+  {
+    "uid": "00513605",
+    "iou": 0.992717851977953,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,60))\nr=w0.sketch().circle(100).circle(52.5,mode='s').finalize().extrude(-120)",
+    "stl": "data/deepcad_test_mesh/00513605.stl"
+  },
+  {
+    "uid": "00704488",
+    "iou": 0.9996891789576368,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.workplane(offset=-200/2).moveTo(0,0).cylinder(200,25).union(w0.workplane(offset=-199/2).box(1.5,1.5,1))",
+    "stl": "data/deepcad_test_mesh/00704488.stl"
+  },
+  {
+    "uid": "00020329",
+    "iou": 0.9594804712694127,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,11))\nr=w0.sketch().rect(200,73).finalize().extrude(-21)",
+    "stl": "data/deepcad_test_mesh/00020329.stl"
+  },
+  {
+    "uid": "00567019",
+    "iou": 0.9937485441808159,
+    "code": "import cadquery as cq\nw0=cq.Workplane('YZ',origin=(100,0,0))\nr=w0.workplane(offset=-200/2).moveTo(0,-0).box(8.5,200,200).union(w0.workplane(offset=-10/2).box(7.5,1.5,9))",
+    "stl": "data/deepcad_test_mesh/00567019.stl"
+  },
+  {
+    "uid": "00469641",
+    "iou": 0.9856316328470127,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,8))\nr=w0.sketch().circle(100).circle(20.5,mode='s').finalize().extrude(-14.5)",
+    "stl": "data/deepcad_test_mesh/00469641.stl"
+  },
+  {
+    "uid": "00836452",
+    "iou": 0.995831320127742,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,55))\nr=w0.workplane(offset=-110/2).cylinder(110,100).union(w0.workplane(offset=-79/2).cylinder(79,91))",
+    "stl": "data/deepcad_test_mesh/00836452.stl"
+  },
+  {
+    "uid": "00244539",
+    "iou": 0.9705002259519871,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-52))\nr=w0.sketch().segment((-100,-39),(-79,-39)).segment((11,20)).segment((100,20)).segment((100,39)).segment((-29.5,39)).segment((-100,39)).close().assemble().finalize().extrude(18).union(w0.workplane(offset=88/2).moveTo(-90,-0).box(20,77,88)).union(w0.workplane(offset=105/2).moveTo(0,29.5).box(200,19,105))",
+    "stl": "data/deepcad_test_mesh/00244539.stl"
+  },
+  {
+    "uid": "00061363",
+    "iou": 0.9544321884738368,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.sketch().segment((-19,-19),(19,1)).segment((19,19.5)).segment((-19,19.5)).close().assemble().finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00061363.stl"
+  },
+  {
+    "uid": "00384083",
+    "iou": 0.9996878582180101,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,-0,0))\nr=w0.workplane(offset=2/2).cylinder(2,100)",
+    "stl": "data/deepcad_test_mesh/00384083.stl"
+  },
+  {
+    "uid": "00255637",
+    "iou": 0.9949313014902672,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.sketch().segment((-71,-69),(71.5,-69)).segment((21,54)).segment((-71,69)).close().assemble().finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00255637.stl"
+  },
+  {
+    "uid": "00503096",
+    "iou": 0.9941771763668887,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,47,0))\nr=w0.sketch().segment((-73.5,-100),(73.5,-100)).segment((73.5,100)).segment((-73.5,100)).close().assemble().finalize().extrude(-93)",
+    "stl": "data/deepcad_test_mesh/00503096.stl"
+  },
+  {
+    "uid": "00637120",
+    "iou": 0.8635579841733638,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,59,0))\nr=w0.sketch().circle(12).circle(4,mode='s').finalize().extrude(-159).union(w0.workplane(offset=41/2).cylinder(41,5.5)).union(w0.workplane(offset=41/2).cylinder(41,5.5))",
+    "stl": "data/deepcad_test_mesh/00637120.stl"
+  },
+  {
+    "uid": "00743393",
+    "iou": 0.8289769351182842,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-100))\nr=w0.sketch().rect(26,27).rect(22.5,22.5,mode='s').finalize().extrude(200)",
+    "stl": "data/deepcad_test_mesh/00743393.stl"
+  },
+  {
+    "uid": "00430264",
+    "iou": 0.992717851977953,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,60))\nr=w0.sketch().circle(100).circle(52.5,mode='s').finalize().extrude(-120)",
+    "stl": "data/deepcad_test_mesh/00430264.stl"
+  },
+  {
+    "uid": "00221028",
+    "iou": 0.8893840738872805,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-66))\nr=w0.sketch().arc((-50,-50),(0,-93),(50,-50)).segment((50,93)).segment((-50,93)).close().assemble().finalize().extrude(-34).union(w0.workplane(offset=7/2).moveTo(0,-0.5).box(100.5,101.5,7)).union(w0.workplane(offset=166/2).moveTo(0,83).box(100,20,166))",
+    "stl": "data/deepcad_test_mesh/00221028.stl"
+  },
+  {
+    "uid": "00248726",
+    "iou": 0.8012314164902004,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.sketch().circle(100).circle(95,mode='s').finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00248726.stl"
+  },
+  {
+    "uid": "00762429",
+    "iou": 0.9904617347532301,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,67,0))\nr=w0.sketch().segment((-83,-100),(83,-100)).segment((83,-33)).segment((-17,-33)).segment((-17,100)).segment((-83,100)).close().assemble().finalize().extrude(-133.5)",
+    "stl": "data/deepcad_test_mesh/00762429.stl"
+  },
+  {
+    "uid": "00229919",
+    "iou": 0.9991995864928136,
+    "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,2))\nr=w0.sketch().circle(100).push([(-83,0)]).rect(2.5,2.5).push([(83,0)]).rect(2,2.5).finalize().extrude(-4)",
+    "stl": "data/deepcad_test_mesh/00229919.stl"
+  },
+  {
+    "uid": "00418628",
+    "iou": 0.9900745189330697,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.workplane(offset=-200/2).moveTo(0,0).cylinder(200,33.5).union(w0.workplane(offset=-199/2).box(1.5,1.5,1))",
+    "stl": "data/deepcad_test_mesh/00418628.stl"
+  },
+  {
+    "uid": "00194214",
+    "iou": 0.980228155204862,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,71,0))\nr=w0.sketch().segment((-62,-22),(38,-100)).segment((62.5,-100)).segment((62.5,100)).segment((38,100)).segment((-62,21)).close().assemble().push([(-21,0)]).circle(24,mode='s').finalize().extrude(-142)",
+    "stl": "data/deepcad_test_mesh/00194214.stl"
+  },
+  {
+    "uid": "00313943",
+    "iou": 0.992015819923682,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,100,0))\nr=w0.sketch().segment((-100,-100),(100,-100)).segment((100,-4)).segment((-26,-4.5)).segment((-26,100)).segment((-100,100)).close().assemble().finalize().extrude(-200)",
+    "stl": "data/deepcad_test_mesh/00313943.stl"
+  },
+  {
+    "uid": "00335067",
+    "iou": 0.9787668773042015,
+    "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,5,0))\nr=w0.sketch().segment((-100,-45),(-96,-45)).segment((96,-45)).segment((100,-30)).segment((100,41)).segment((96,45)).segment((-96,45)).segment((-100,39.5)).close().assemble().finalize().extrude(-9)",
+    "stl": "data/deepcad_test_mesh/00335067.stl"
+  }
+]

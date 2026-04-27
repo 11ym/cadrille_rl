@@ -1,0 +1,30 @@
+{
+  "ckpt": "checkpoints/cadrille-rl",
+  "modality": "pc",
+  "temp": 0.0,
+  "n": 1,
+  "results": [
+    {
+      "case_id": "128996_42176b10_0000",
+      "stl": "data/fusion360_test_mesh/128996_42176b10_0000.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('ZX',origin=(0,74,0))\nr=w0.sketch().push([(0,72.5)]).rect(100,55.5).finalize().extrude(-148).union(w0.sketch().segment((-50,-49),(-47,-57)).arc((0,-100),(50,-57)).segment((50,39.5)).segment((50,100)).segment((-50,100)).close().assemble().push([(0,-51)]).rect(46.5,43.5,mode='s').finalize().extrude(-24))",
+          "iou": 0.892188640985937,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_id": "34769_44655d03_0006",
+      "stl": "data/fusion360_test_mesh/34769_44655d03_0006.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-44))\nr=w0.sketch().circle(100).circle(62.5,mode='s').finalize().extrude(25.5).union(w0.sketch().circle(75.5).circle(62.5,mode='s').finalize().extrude(88))",
+          "iou": 0.9710296421685066,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

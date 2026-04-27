@@ -1,0 +1,19 @@
+{
+  "ckpt": "checkpoints/cadrille-rl",
+  "modality": "img",
+  "temp": 0.0,
+  "n": 1,
+  "results": [
+    {
+      "case_id": "tmpgjo8mqa8",
+      "stl": "data/obj/tmpgjo8mqa8.stl",
+      "samples": [
+        {
+          "code": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,1))\nw1=cq.Workplane('ZX',origin=(0,-29,0))\nr=w0.workplane(offset=6/2).cylinder(6,1.5).union(w0.workplane(offset=99/2).box(1.5,1,99)).union(w1.sketch().push([(0,0)]).circle(96.5).circle(84.5,mode='s').finalize().extrude(8)).union(w1.workplane(offset=9/2).box(1.5,1.5,1.5))",
+          "iou": null,
+          "error": null
+        }
+      ]
+    }
+  ]
+}
